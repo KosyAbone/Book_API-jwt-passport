@@ -1,41 +1,27 @@
 import passport from 'passport';
-const LocalStrategy = require('passport-local').Strategy;
-import bcrypt from 'bcrypt';
-import User from '../models/userModel'; 
+import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
+import User from '../models/userModel';
+require('dotenv').config();
+
+const options = {
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+  secretOrKey: process.env.JWT_SECRET,
+};
 
 passport.use(
-  new LocalStrategy(async (username, password, done) => {
+  new JwtStrategy(options, async (jwtPayload, done) => {
     try {
-      const user = await User.findOne({ username: username });
+      const user = await User.findById(jwtPayload.id);
 
       if (!user) {
-        return done(null, false, { message: 'No user with this email.' });
+        return done(null, false);
       }
 
-      const match = await bcrypt.compare(password, user.password);
-
-      if (match) {
-        return done(null, user);
-      } else {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
+      return done(null, user);
     } catch (error) {
-      return done(error);
+      return done(error, false);
     }
   })
 );
-
-passport.serializeUser((user, done) => {
-  done(null, user.id);
-});
-
-passport.deserializeUser(async (id, done) => {
-  try {
-    const user = await User.findById(id);
-    done(null, user);
-  } catch (error) {
-    done(error);
-  }
-});
 
 export default passport;

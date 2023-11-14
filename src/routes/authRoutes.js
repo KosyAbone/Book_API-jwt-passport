@@ -1,19 +1,12 @@
 import express from "express";
-import { authenticateUser, registerUser } from '../middleware/authMiddleware';
+import { registerUser, loginUser } from '../controllers/authController';
 const router = express.Router()
 
 // Signup route
 router.post('/register', registerUser);
   
 // Login route
-router.post('/login', authenticateUser, (req, res) => {
-    res.json({ message: 'Login successful', success: true });
-});
+router.post('/login', loginUser);
 
-// Logout route
-router.get('/logout', (req, res) => {
-    req.logout(() => {}); // Passport function to terminate the login session
-    res.json({ message: 'Logged out successfully', success: true });
-  });
 
 export default router

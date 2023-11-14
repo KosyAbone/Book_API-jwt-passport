@@ -6,7 +6,7 @@
 */
 
 import express from "express";
-import { addNewBook, getAllBooks, getBookById, updateBook, deleteBook, addMultipleBooks } from "../controllers/controllers";
+import { addNewBook, getAllBooks, getBookById, updateBook, deleteBook, addMultipleBooks } from "../controllers/bookControllers";
 import { authenticateUser } from '../middleware/authMiddleware';
 const router = express.Router()
 
