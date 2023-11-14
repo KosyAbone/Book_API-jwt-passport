@@ -14,12 +14,12 @@ router.get('/', authenticateUser, getAllBooks); //protected route to get all boo
 
 router.get('/:id', authenticateUser, getBookById); //protected route to get a book by its ID
 
-router.post('/', authenticateUser, addNewBook); //protected route to add a new book
+router.post('/create', authenticateUser, addNewBook); //protected route to add a new book
 
 router.post('/addBooks', authenticateUser, addMultipleBooks); //protected route to add multiple books
 
-router.put('/:id', authenticateUser, updateBook); //protected route to update a book by its ID
+router.put('/update/:id', authenticateUser, updateBook); //protected route to update a book by its ID
 
-router.delete('/:id', authenticateUser, deleteBook); //protected route to delete a book by its ID
+router.delete('/del/:id', authenticateUser, deleteBook); //protected route to delete a book by its ID
 
 export default router
