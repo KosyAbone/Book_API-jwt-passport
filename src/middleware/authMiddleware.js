@@ -1,4 +1,4 @@
-import passport from '../config/passport-config';
+const passport = require('../config/passport-config');
 
 const authenticateUser = (req, res, next) => {
   passport.authenticate('jwt', { session: false }, (err, user, info) => {
@@ -11,4 +11,4 @@ const authenticateUser = (req, res, next) => {
   })(req, res, next);
 };
 
-export { authenticateUser };
+module.exports = authenticateUser;

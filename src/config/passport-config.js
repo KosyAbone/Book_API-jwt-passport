@@ -1,6 +1,7 @@
-import passport from 'passport';
-import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
-import User from '../models/userModel';
+const passport = require('passport'); // Passport for authentication
+const JwtStrategy = require('passport-jwt').Strategy; // JWT Strategy for Passport
+const ExtractJwt = require('passport-jwt').ExtractJwt; // Extract JWT from header
+const User = require('../models/userModel');
 require('dotenv').config();
 
 const options = {
@@ -24,4 +25,4 @@ passport.use(
   })
 );
 
-export default passport;
+module.exports = passport;

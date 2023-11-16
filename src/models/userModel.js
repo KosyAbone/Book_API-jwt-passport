@@ -4,7 +4,7 @@
   Student ID: 200569052
   Date: 13-11-2023
 */
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
     firstName: {

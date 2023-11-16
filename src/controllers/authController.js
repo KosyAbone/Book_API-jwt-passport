@@ -1,9 +1,9 @@
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
-import User from '../models/userModel';
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const User = require('../models/userModel');
 require('dotenv').config();
 
-export const registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
   try {
     const { username, password } = req.body;
 
@@ -27,7 +27,7 @@ export const registerUser = async (req, res) => {
 };
 
 
-export const loginUser = async (req, res) => {
+const loginUser = async (req, res) => {
   try {
     const { username, password } = req.body;
 
@@ -51,3 +51,5 @@ export const loginUser = async (req, res) => {
     res.status(500).json({ error: error.message, success: false });
   }
 };
+
+module.exports = { registerUser, loginUser };

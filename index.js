@@ -6,12 +6,12 @@
 */
 
 require('dotenv').config()
-import express from 'express'
-import bodyParser from 'body-parser'
-import passport from './src/config/passport-config';
-import flash from 'express-flash';
-import bookRouter from './src/routes/bookRoutes'
-import authRouter from './src/routes/authRoutes'
+const express = require('express')
+const bodyParser = require('body-parser')
+const passport = require('./src/config/passport-config');
+const flash =  require('express-flash');
+const bookRouter = require('./src/routes/bookRoutes')
+const authRouter = require('./src/routes/authRoutes')
 const InitializeDB = require('./db')
 InitializeDB(); //initialize the database
 
