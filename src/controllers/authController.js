@@ -5,7 +5,12 @@ require('dotenv').config();
 
 const registerUser = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { firstName, lastName, email, password } = req.body;
+
+    //check if any field is empty
+    if(!(firstName && lastName && email && password)){
+      return res.status(409).json({message: "Some fields are empty"})
+    }
 
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
