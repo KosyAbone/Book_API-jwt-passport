@@ -1,8 +1,8 @@
 /*
-  Filename: db.js
-  Student's Name: Kosisochukwu Abone
-  Student ID: 200569052
-  Date: 12-10-2023
+  Filename: crsModel.js
+  Student's Name: Ilham Sheikh
+  Student ID: 200557496
+  Date: 16-11-2023
 */
 
 require('dotenv').config()

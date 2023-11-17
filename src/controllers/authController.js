@@ -1,3 +1,9 @@
+/*
+  Filename: controller.js
+  Student's Name: Kosisochukwu Abone
+  Student ID: 200569052
+  Date: 16-11-2023
+*/
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/userModel');

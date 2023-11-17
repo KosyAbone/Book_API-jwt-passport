@@ -1,8 +1,8 @@
 /*
   Filename: crsModel.js
-  Student's Name: Kosisochukwu Abone
-  Student ID: 200569052
-  Date: 13-11-2023
+  Student's Name: Ilham Sheikh
+  Student ID: 200557496
+  Date: 16-11-2023
 */
 const mongoose = require('mongoose');
 

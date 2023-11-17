@@ -1,3 +1,9 @@
+/*
+  Filename: controller.js
+  Student's Name: Kosisochukwu Abone
+  Student ID: 200569052
+  Date: 16-11-2023
+*/
 const passport = require('passport'); // Passport for authentication
 const JwtStrategy = require('passport-jwt').Strategy; // JWT Strategy for Passport
 const ExtractJwt = require('passport-jwt').ExtractJwt; // Extract JWT from header
