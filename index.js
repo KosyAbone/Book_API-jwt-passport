@@ -18,9 +18,9 @@ InitializeDB(); //initialize the database
 const app = express()
 const PORT = process.env.PORT || 4000
 
-// app.use(bodyParser.urlencoded({extended: true}))
-// app.use(bodyParser.json())
-// app.use(flash());
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(flash());
 
 // Initialize Passport
 app.use(passport.initialize());
