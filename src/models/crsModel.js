@@ -24,7 +24,6 @@ const BookSchema = new mongoose.Schema({ //create a schema for the book model
     },
     Genre: {
         type: String,
-        required: 'Fill in the genre'
     },
     createdDate: {
         type: Date,
