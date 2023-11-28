@@ -5,7 +5,7 @@
   Date: 16-11-2023
 */
 
-const Book = require('../models/crsModel');
+const Book = require('../models/bookModel');
 
 /**
  * Function to Add a new book to the database.
