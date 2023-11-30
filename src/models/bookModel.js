@@ -13,7 +13,6 @@ const BookSchema = new mongoose.Schema({ //create a schema for the book model
     },
     ISBN: {
         type: String,
-        required: 'Book must have ISBN'
     },
     Rating: {
         type: Number
