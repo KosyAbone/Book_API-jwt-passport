@@ -14,5 +14,8 @@ router.post('/register', authController.registerUser);
 // Login route
 router.post('/login', authController.loginUser);
 
+// Profile route
+router.get('/profile', authController.getUserProfile);
+
 
 module.exports = router
