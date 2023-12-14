@@ -74,4 +74,10 @@ const getUserProfile = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser, getUserProfile };
+// Endpoint to check user authentication status
+const checkAuthentication = async (req, res) => {
+  res.status(200).json({ authenticated: true, user: req.user });
+  // 'req.user' will contain the authenticated user information, it's sent back to the client
+};
+
+module.exports = { registerUser, loginUser, getUserProfile, checkAuthentication };
