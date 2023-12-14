@@ -15,7 +15,7 @@ router.post('/register', authController.registerUser);
 router.post('/login', authController.loginUser);
 
 // Profile route
-router.get('/profile', authController.getUserProfile);
+router.get('/profile/:userId', authController.getUserProfile);
 
 
 module.exports = router
