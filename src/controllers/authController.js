@@ -65,11 +65,9 @@ const loginUser = async (req, res) => {
 
 const getUserProfile = async (req, res) => {
   try {
-    const userId = req.params.userId;
-    if (userId !== req.user.id) {
-      return res.status(403).json({ message: 'Forbidden. You are not authorized to update this profile.' });
-    }
-    const user = await User.findById(userId).select('-password');
+    const email = req.params.email;
+    
+    const user = await User.findOne({ email });
     res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ message: 'Internal server error: ' + error.message  });
