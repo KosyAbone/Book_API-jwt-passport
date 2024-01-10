@@ -1,7 +1,6 @@
 /*
   Filename: controller.js
-  Student's Name: Kosisochukwu Abone
-  Student ID: 200569052
+  Author: Kosisochukwu Abone
   Date: 16-11-2023
 */
 const passport = require('../config/passport-config');

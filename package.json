@@ -10,7 +10,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Group 15: Kosisochukwu Abone, Abhijit Singh, Ilham Sheikh",
+  "author": "Kosisochukwu Abone",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

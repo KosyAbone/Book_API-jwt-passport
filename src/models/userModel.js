@@ -1,7 +1,6 @@
 /*
   Filename: crsModel.js
-  Student's Name: Ilham Sheikh
-  Student ID: 200557496
+  Author: Kosisochukwu Abone
   Date: 16-11-2023
 */
 const mongoose = require('mongoose');

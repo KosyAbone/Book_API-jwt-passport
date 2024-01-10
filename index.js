@@ -1,7 +1,6 @@
 /*
   Filename: index.js
-  Student's Name: Abhijit Singh
-  Student ID: 200533462
+  Author: Kosisochukwu Abone
   Date: 16-11-2023
 */
 
