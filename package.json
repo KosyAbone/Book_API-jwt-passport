@@ -1,5 +1,5 @@
 {
-  "name": "grp15app",
+  "name": "book_api_app",
   "version": "1.0.0",
   "description": "Creating an Express Project",
   "main": "index.js",
