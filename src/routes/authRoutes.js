@@ -19,7 +19,7 @@ router.get('/profile/:email', authController.getUserProfile);
 const authenticateUser = require('../middleware/authMiddleware');
 
 // Endpoint to check user authentication status
-router.get('/checkAuthentication', authenticateUser, authController.checkAuthentication);
+// router.get('/checkAuthentication', authenticateUser, authController.checkAuthentication);
 
 
 module.exports = router
