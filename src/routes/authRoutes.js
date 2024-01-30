@@ -13,8 +13,8 @@ router.post('/register', authController.registerUser);
 // Login route
 router.post('/login', authController.loginUser);
 
-// // Profile route
-// router.get('/profile/:email', authController.getUserProfile);
+// Profile route
+router.get('/profile/:email', authController.getUserProfile);
 
 const authenticateUser = require('../middleware/authMiddleware');
 
